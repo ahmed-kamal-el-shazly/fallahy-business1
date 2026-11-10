@@ -1,0 +1,150 @@
+{
+  "siteTitle": "Traditional Farm Food — Pre-order",
+  "siteDescription": "Farm bread, cheese, and butter from village farmers in Gharbia. Pre-order now, pay on delivery.",
+  "nav": {
+    "products": "Products",
+    "howItWorks": "How it works",
+    "farmers": "Farmers",
+    "faq": "FAQ",
+    "preOrder": "Pre-order",
+    "privacy": "Privacy Policy"
+  },
+  "hero": {
+    "headline": "Farm bread, cheese and butter, the way they used to be made",
+    "subhead": "From the hands of village farmers in Gharbia to your door. Pre-order now, pay on delivery.",
+    "cta": "Pre-order now"
+  },
+  "trustChips": [
+    "From the farmer to your home",
+    "Pay on delivery",
+    "Pre-order, no payment now"
+  ],
+  "howItWorks": {
+    "title": "How to order",
+    "steps": [
+      { "icon": "🛒", "title": "Choose what you want", "text": "Browse products and pick what you like." },
+      { "icon": "💬", "title": "We confirm on WhatsApp", "text": "We'll contact you to confirm details and timing." },
+      { "icon": "🚚", "title": "We deliver on the delivery day", "text": "Delivery from the farm to your door. Pay on delivery." }
+    ]
+  },
+  "products": {
+    "title": "Our Products",
+    "addToOrder": "Add to order",
+    "notifyMe": "Notify me",
+    "soldOut": "Sold out",
+    "comingSoon": "Coming soon",
+    "available": "Available",
+    "priceOnOrder": "Price confirmed on order",
+    "unit": "Unit",
+    "origin": "Origin",
+    "storage": "Storage",
+    "minOrder": "Minimum order",
+    "close": "Close",
+    "categoryBread": "Bread",
+    "categoryDairy": "Dairy",
+    "samplePhoto": "Sample photo"
+  },
+  "farmers": {
+    "title": "Our Farmers"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "What does 'pre-order' mean?",
+        "a": "It means you place your order days in advance, and we prepare it fresh from the farm and deliver it on the delivery day. No payment now — you pay on delivery."
+      },
+      {
+        "q": "Where do you deliver?",
+        "a": "Currently we deliver in Gharbia. Expansion to Alexandria, Cairo, and Giza is coming soon."
+      },
+      {
+        "q": "What are the delivery days?",
+        "a": "Delivery is on Thursday and Friday. You can choose your preferred day when ordering."
+      },
+      {
+        "q": "How do I pay?",
+        "a": "Cash on delivery. No online payment at this time."
+      },
+      {
+        "q": "How long do the products stay fresh?",
+        "a": "Each product has storage notes if available. Generally, bread is best eaten the same day or frozen, and cheese and butter should be refrigerated."
+      },
+      {
+        "q": "How can I contact you?",
+        "a": "Use the WhatsApp button on the page, or message us on our Facebook page."
+      }
+    ]
+  },
+  "cart": {
+    "title": "Your Order",
+    "items": "items",
+    "item": "item",
+    "estimatedTotal": "Estimated total",
+    "continue": "Continue",
+    "empty": "Your order is empty",
+    "remove": "Remove",
+    "pricePending": "Price not set yet"
+  },
+  "form": {
+    "title": "Order Details",
+    "name": "Full name",
+    "phone": "Mobile number",
+    "phonePlaceholder": "01XXXXXXXXX",
+    "governorate": "Governorate",
+    "governorates": {
+      "Gharbia": "Gharbia",
+      "Alexandria": "Alexandria",
+      "Cairo": "Cairo",
+      "Giza": "Giza",
+      "Other": "Other"
+    },
+    "selectGovernorate": "Select governorate",
+    "area": "City / Area",
+    "address": "Address details",
+    "deliveryDay": "Preferred delivery day",
+    "deliveryDays": {
+      "Thursday": "Thursday",
+      "Friday": "Friday",
+      "Any": "Any day"
+    },
+    "selectDay": "Select day",
+    "notes": "Notes (optional)",
+    "consent": "I agree to the",
+    "consentLink": "Privacy Policy",
+    "submit": "Submit order",
+    "sending": "Sending…",
+    "nameError": "Name is required (2–60 characters)",
+    "phoneError": "Invalid Egyptian mobile number",
+    "governorateError": "Select a governorate",
+    "areaError": "City or area is required",
+    "addressError": "Address is required (5–200 characters)",
+    "dayError": "Select a delivery day",
+    "consentError": "You must agree to the Privacy Policy",
+    "outsideArea": "Delivery is not available in your area yet. We'll record your order and contact you if it becomes available."
+  },
+  "success": {
+    "title": "We received your order!",
+    "orderId": "Order ID",
+    "body": "Tap the button to confirm your order on WhatsApp.",
+    "whatsappConfirm": "Confirm on WhatsApp",
+    "fallback": "If something went wrong, send us your order on WhatsApp directly.",
+    "newOrder": "New order"
+  },
+  "waitlist": {
+    "title": "Notify me when available",
+    "name": "Name",
+    "phone": "Mobile number",
+    "submit": "Notify me",
+    "success": "You're registered! We'll contact you when the product is available.",
+    "nameError": "Name is required",
+    "phoneError": "Invalid Egyptian mobile number"
+  },
+  "footer": {
+    "copyright": "All rights reserved",
+    "whatsapp": "Contact us on WhatsApp"
+  },
+  "langToggle": "عربي",
+  "preOrderBadge": "Pre-order — No payment now"
+}
+

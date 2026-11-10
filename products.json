@@ -1,0 +1,74 @@
+{
+  "products": [
+    {
+      "id": "aish-rahaly",
+      "category": "bread",
+      "name": { "ar": "عيش رحالي", "en": "Aish Rahaly" },
+      "description": { "ar": "عيش رحالي بلدي من أيدي فلاحين القرية.", "en": "Traditional rahaly bread made by village farmers." },
+      "unit": { "ar": "رغيف", "en": "loaf" },
+      "price_egp": null,
+      "min_qty": 1,
+      "step": 1,
+      "availability": "available",
+      "origin": { "ar": "", "en": "" },
+      "storage": { "ar": "", "en": "" },
+      "image": "images/placeholder-bread.svg"
+    },
+    {
+      "id": "koras",
+      "category": "bread",
+      "name": { "ar": "قرص", "en": "Koras" },
+      "description": { "ar": "قرص بلدي من أيدي فلاحين القرية.", "en": "Traditional koras bread made by village farmers." },
+      "unit": { "ar": "قطعة", "en": "piece" },
+      "price_egp": null,
+      "min_qty": 1,
+      "step": 1,
+      "availability": "available",
+      "origin": { "ar": "", "en": "" },
+      "storage": { "ar": "", "en": "" },
+      "image": "images/placeholder-bread.svg"
+    },
+    {
+      "id": "feteer-meshaltet",
+      "category": "bread",
+      "name": { "ar": "فطير مشلتت", "en": "Feteer Meshaltet" },
+      "description": { "ar": "فطير مشلتت فلاحي بطبقات هشّة.", "en": "Layered, flaky farm-style feteer meshaltet." },
+      "unit": { "ar": "قطعة", "en": "piece" },
+      "price_egp": null,
+      "min_qty": 1,
+      "step": 1,
+      "availability": "coming_soon",
+      "origin": { "ar": "", "en": "" },
+      "storage": { "ar": "", "en": "" },
+      "image": "images/placeholder-bread.svg"
+    },
+    {
+      "id": "qareesh",
+      "category": "dairy",
+      "name": { "ar": "جبنة قريش", "en": "Qareesh Cheese" },
+      "description": { "ar": "جبنة قريش بلدي من لبن القرية.", "en": "Village-made qareesh cheese." },
+      "unit": { "ar": "كيلو", "en": "kg" },
+      "price_egp": null,
+      "min_qty": 0.5,
+      "step": 0.5,
+      "availability": "available",
+      "origin": { "ar": "", "en": "" },
+      "storage": { "ar": "", "en": "" },
+      "image": "images/placeholder-dairy.svg"
+    },
+    {
+      "id": "fallahy-butter",
+      "category": "dairy",
+      "name": { "ar": "زبدة فلاحي", "en": "Fallahy Butter" },
+      "description": { "ar": "زبدة فلاحي بلدي.", "en": "Traditional farm butter." },
+      "unit": { "ar": "كيلو", "en": "kg" },
+      "price_egp": null,
+      "min_qty": 0.25,
+      "step": 0.25,
+      "availability": "available",
+      "origin": { "ar": "", "en": "" },
+      "storage": { "ar": "", "en": "" },
+      "image": "images/placeholder-dairy.svg"
+    }
+  ]
+}

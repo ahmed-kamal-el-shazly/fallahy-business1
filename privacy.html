@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سياسة الخصوصية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <script src="config.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" id="headerLogo"></a>
+      <div class="header__actions">
+        <button class="btn btn--lang" id="langToggle">English</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container" style="max-width:720px;">
+
+      <!-- Arabic content -->
+      <div id="privacyAr">
+        <h1 style="margin-bottom:24px; color:var(--olive-dark);">سياسة الخصوصية</h1>
+
+        <h2>ما البيانات التي نجمعها؟</h2>
+        <p>نجمع البيانات التالية عند إرسال طلب أو التسجيل في قائمة الانتظار:</p>
+        <ul style="padding-inline-start:20px; list-style:disc; margin-bottom:16px;">
+          <li>الاسم بالكامل</li>
+          <li>رقم الموبايل</li>
+          <li>العنوان (المحافظة، المنطقة، تفاصيل العنوان)</li>
+          <li>محتوى الطلب (المنتجات والكميات)</li>
+          <li>ملاحظات الطلب</li>
+          <li>بيانات فنية: نوع الجهاز، اللغة، مصدر الزيارة (UTM)</li>
+        </ul>
+
+        <h2>لماذا نجمع هذه البيانات؟</h2>
+        <ul style="padding-inline-start:20px; list-style:disc; margin-bottom:16px;">
+          <li>لتأكيد الطلب والتواصل معك عبر واتساب</li>
+          <li>لتوصيل الطلب إلى عنوانك</li>
+          <li>لفهم الطلب على منتجاتنا وتحسين الخدمة</li>
+        </ul>
+
+        <h2>مدة الاحتفاظ بالبيانات</h2>
+        <p>نحتفظ ببيانات الطلبات لمدة لا تزيد عن سنة من تاريخ الطلب، ما لم يُطلب حذفها قبل ذلك.</p>
+
+        <h2>مشاركة البيانات</h2>
+        <p>لا نبيع بياناتك أو نشاركها مع أي طرف ثالث. البيانات تُستخدم فقط لأغراض تنفيذ الطلب والتواصل.</p>
+
+        <h2>طلب الحذف</h2>
+        <p>يمكنك طلب حذف بياناتك في أي وقت عبر التواصل معنا:</p>
+        <p id="privacyContactAr" style="font-weight:600;"></p>
+
+        <h2>ملاحظة</h2>
+        <p>يجب على صاحب المشروع التحقق من القوانين المصرية المتعلقة بحماية البيانات الشخصية والتأكد من الامتثال لها.</p>
+      </div>
+
+      <!-- English content -->
+      <div id="privacyEn" style="display:none;">
+        <h1 style="margin-bottom:24px; color:var(--olive-dark);">Privacy Policy</h1>
+
+        <h2>What data do we collect?</h2>
+        <p>We collect the following data when you submit an order or join a waitlist:</p>
+        <ul style="padding-inline-start:20px; list-style:disc; margin-bottom:16px;">
+          <li>Full name</li>
+          <li>Mobile number</li>
+          <li>Address (governorate, area, address details)</li>
+          <li>Order contents (products and quantities)</li>
+          <li>Order notes</li>
+          <li>Technical data: device type, language, visit source (UTM)</li>
+        </ul>
+
+        <h2>Why do we collect this data?</h2>
+        <ul style="padding-inline-start:20px; list-style:disc; margin-bottom:16px;">
+          <li>To confirm your order and contact you via WhatsApp</li>
+          <li>To deliver your order to your address</li>
+          <li>To understand demand for our products and improve our service</li>
+        </ul>
+
+        <h2>Data retention</h2>
+        <p>We retain order data for up to one year from the date of the order, unless deletion is requested sooner.</p>
+
+        <h2>Data sharing</h2>
+        <p>We do not sell or share your data with any third party. Data is used only for order fulfillment and communication.</p>
+
+        <h2>Deletion requests</h2>
+        <p>You can request deletion of your data at any time by contacting us:</p>
+        <p id="privacyContactEn" style="font-weight:600;"></p>
+
+        <h2>Note</h2>
+        <p>The business owner should verify applicable Egyptian personal data protection laws and ensure compliance.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__copy">&copy; <span id="footerYear"></span> <span id="footerBrand"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple toggle for privacy page
+    const config = window.SITE_CONFIG;
+    document.getElementById('headerLogo').textContent = config.brandName;
+    document.getElementById('footerBrand').textContent = config.brandName;
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+    const contact = config.privacyContact || config.whatsappNumber;
+    document.getElementById('privacyContactAr').textContent = contact;
+    document.getElementById('privacyContactEn').textContent = contact;
+
+    let currentLang = 'ar';
+    const langBtn = document.getElementById('langToggle');
+
+    langBtn.addEventListener('click', () => {
+      if (currentLang === 'ar') {
+        currentLang = 'en';
+        document.documentElement.lang = 'en';
+        document.documentElement.dir = 'ltr';
+        document.getElementById('privacyAr').style.display = 'none';
+        document.getElementById('privacyEn').style.display = '';
+        langBtn.textContent = 'عربي';
+        document.title = 'Privacy Policy';
+      } else {
+        currentLang = 'ar';
+        document.documentElement.lang = 'ar';
+        document.documentElement.dir = 'rtl';
+        document.getElementById('privacyAr').style.display = '';
+        document.getElementById('privacyEn').style.display = 'none';
+        langBtn.textContent = 'English';
+        document.title = 'سياسة الخصوصية';
+      }
+    });
+  </script>
+</body>
+</html>
+

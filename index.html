@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أكل فلاحي بلدي — حجز مسبق</title>
+  <meta name="description" content="عيش وجبنة وزبدة فلاحي من أيدي فلاحين قرى الغربية. احجز طلبك دلوقتي والدفع عند الاستلام.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="أكل فلاحي بلدي — حجز مسبق">
+  <meta property="og:description" content="عيش وجبنة وزبدة فلاحي من أيدي فلاحين قرى الغربية. احجز طلبك دلوقتي والدفع عند الاستلام.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="أكل فلاحي بلدي — حجز مسبق">
+  <meta name="twitter:description" content="عيش وجبنة وزبدة فلاحي من أيدي فلاحين قرى الغربية. احجز طلبك دلوقتي والدفع عند الاستلام.">
+  <meta name="twitter:image" content="images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts: Cairo (self-hosted subset would be ideal; using Google Fonts for now) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="config.js"></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="header__logo" id="headerLogo" aria-label="Home"></a>
+      <nav class="header__nav" id="headerNav" aria-label="Main navigation">
+        <a href="#products" class="header__link" data-i18n="nav.products"></a>
+        <a href="#how-it-works" class="header__link" data-i18n="nav.howItWorks"></a>
+        <a href="#farmers" class="header__link header__link--farmers" data-i18n="nav.farmers"></a>
+        <a href="#faq" class="header__link" data-i18n="nav.faq"></a>
+      </nav>
+      <div class="header__actions">
+        <button class="btn btn--lang" id="langToggle" aria-label="Switch language" data-i18n="langToggle"></button>
+        <a href="#products" class="btn btn--primary btn--sm header__cta" data-i18n="nav.preOrder"></a>
+      </div>
+      <button class="header__burger" id="menuBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE NAV OVERLAY ===== -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <a href="#products" class="mobile-nav__link" data-i18n="nav.products"></a>
+      <a href="#how-it-works" class="mobile-nav__link" data-i18n="nav.howItWorks"></a>
+      <a href="#farmers" class="mobile-nav__link mobile-nav__link--farmers" data-i18n="nav.farmers"></a>
+      <a href="#faq" class="mobile-nav__link" data-i18n="nav.faq"></a>
+      <a href="#products" class="btn btn--primary mobile-nav__cta" data-i18n="nav.preOrder"></a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <span class="hero__badge" data-i18n="preOrderBadge"></span>
+        <h1 class="hero__headline" data-i18n="hero.headline"></h1>
+        <p class="hero__subhead" data-i18n="hero.subhead"></p>
+        <a href="#products" class="btn btn--primary btn--lg hero__cta" data-i18n="hero.cta"></a>
+        <div class="hero__chips" id="trustChips"></div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="section how-it-works" id="how-it-works">
+      <div class="container">
+        <h2 class="section__title" data-i18n="howItWorks.title"></h2>
+        <div class="steps" id="stepsContainer"></div>
+      </div>
+    </section>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section class="section products" id="products">
+      <div class="container">
+        <h2 class="section__title" data-i18n="products.title"></h2>
+        <div class="products__grid" id="productsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== FARMERS ===== -->
+    <section class="section farmers" id="farmers" style="display:none;">
+      <div class="container">
+        <h2 class="section__title" data-i18n="farmers.title"></h2>
+        <div class="farmers__grid" id="farmersGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section faq" id="faq">
+      <div class="container">
+        <h2 class="section__title" data-i18n="faq.title"></h2>
+        <div class="faq__list" id="faqList"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== ORDER SUMMARY BAR (sticky bottom) ===== -->
+  <div class="cart-bar" id="cartBar" style="display:none;">
+    <div class="container cart-bar__inner">
+      <div class="cart-bar__info">
+        <span class="cart-bar__count" id="cartCount"></span>
+        <span class="cart-bar__total" id="cartTotal"></span>
+      </div>
+      <button class="btn btn--primary cart-bar__btn" id="cartContinueBtn" data-i18n="cart.continue"></button>
+    </div>
+  </div>
+
+  <!-- ===== ORDER FORM MODAL ===== -->
+  <div class="modal" id="orderModal" aria-hidden="true" role="dialog" aria-labelledby="orderFormTitle">
+    <div class="modal__backdrop" id="orderModalBackdrop"></div>
+    <div class="modal__content modal__content--form">
+      <button class="modal__close" id="orderModalClose" aria-label="Close">&times;</button>
+
+      <!-- Cart review inside modal -->
+      <div id="orderCartReview"></div>
+
+      <!-- Form -->
+      <form id="orderForm" novalidate>
+        <h2 class="modal__title" id="orderFormTitle" data-i18n="form.title"></h2>
+
+        <div class="form-group">
+          <label for="formName" data-i18n="form.name"></label>
+          <input type="text" id="formName" name="fullname" required minlength="2" maxlength="60" autocomplete="name">
+          <span class="form-error" id="formNameError" data-i18n="form.nameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="formPhone" data-i18n="form.phone"></label>
+          <input type="tel" id="formPhone" name="phone" required autocomplete="tel" dir="ltr" data-i18n-placeholder="form.phonePlaceholder">
+          <span class="form-error" id="formPhoneError" data-i18n="form.phoneError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="formGovernorate" data-i18n="form.governorate"></label>
+          <select id="formGovernorate" name="governorate" required>
+            <option value="" data-i18n="form.selectGovernorate"></option>
+          </select>
+          <span class="form-error" id="formGovernorateError" data-i18n="form.governorateError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="formArea" data-i18n="form.area"></label>
+          <input type="text" id="formArea" name="area" required autocomplete="address-level2">
+          <span class="form-error" id="formAreaError" data-i18n="form.areaError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="formAddress" data-i18n="form.address"></label>
+          <textarea id="formAddress" name="address" required minlength="5" maxlength="200" rows="2" autocomplete="street-address"></textarea>
+          <span class="form-error" id="formAddressError" data-i18n="form.addressError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="formDay" data-i18n="form.deliveryDay"></label>
+          <select id="formDay" name="delivery_day" required>
+            <option value="" data-i18n="form.selectDay"></option>
+          </select>
+          <span class="form-error" id="formDayError" data-i18n="form.dayError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="formNotes" data-i18n="form.notes"></label>
+          <textarea id="formNotes" name="notes" maxlength="300" rows="2"></textarea>
+        </div>
+
+        <!-- Honeypot -->
+        <div class="form-group" style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+          <label for="formWebsite">Website</label>
+          <input type="text" id="formWebsite" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-group form-group--consent">
+          <label class="checkbox-label">
+            <input type="checkbox" id="formConsent" name="consent" required>
+            <span data-i18n="form.consent"></span>
+            <a href="privacy.html" target="_blank" data-i18n="form.consentLink"></a>
+          </label>
+          <span class="form-error" id="formConsentError" data-i18n="form.consentError"></span>
+        </div>
+
+        <div id="outsideAreaMsg" class="form-notice" style="display:none;" data-i18n="form.outsideArea"></div>
+
+        <button type="submit" class="btn btn--primary btn--lg form__submit" id="formSubmitBtn" data-i18n="form.submit"></button>
+      </form>
+
+      <!-- Success screen (hidden by default) -->
+      <div id="orderSuccess" class="success-screen" style="display:none;">
+        <div class="success-screen__icon">✅</div>
+        <h2 class="success-screen__title" data-i18n="success.title"></h2>
+        <p class="success-screen__order-id"><span data-i18n="success.orderId"></span>: <strong id="successOrderId"></strong></p>
+        <div id="successSummary" class="success-screen__summary"></div>
+        <p class="success-screen__body" data-i18n="success.body"></p>
+        <a id="whatsappConfirmBtn" href="#" target="_blank" rel="noopener" class="btn btn--whatsapp btn--lg success-screen__wa-btn">
+          <svg class="icon-wa" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.005 21.785a9.68 9.68 0 01-4.934-1.355l-.354-.21-3.671.963.98-3.578-.231-.368A9.68 9.68 0 012.22 12.01c.003-5.35 4.358-9.702 9.714-9.702a9.65 9.65 0 016.872 2.85 9.65 9.65 0 012.844 6.862c-.003 5.35-4.358 9.702-9.71 9.702l-.004.003zm8.272-17.97A11.59 11.59 0 0012.005.19C5.495.19.16 5.52.157 12.013a11.8 11.8 0 001.578 5.907L.057 23.81l6.063-1.59a11.82 11.82 0 005.632 1.437h.005c6.508 0 11.843-5.33 11.846-11.822a11.76 11.76 0 00-3.462-8.38z"/></svg>
+          <span data-i18n="success.whatsappConfirm"></span>
+        </a>
+        <p class="success-screen__fallback" data-i18n="success.fallback"></p>
+        <button class="btn btn--outline" id="newOrderBtn" data-i18n="success.newOrder"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PRODUCT DETAIL MODAL ===== -->
+  <div class="modal" id="productModal" aria-hidden="true" role="dialog" aria-labelledby="productModalTitle">
+    <div class="modal__backdrop" id="productModalBackdrop"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="productModalClose" aria-label="Close">&times;</button>
+      <img id="productModalImg" class="product-detail__img" src="" alt="" width="400" height="300" loading="lazy">
+      <span class="product-detail__sample-badge" data-i18n="products.samplePhoto"></span>
+      <h2 class="product-detail__name" id="productModalTitle"></h2>
+      <p class="product-detail__desc" id="productModalDesc"></p>
+      <div class="product-detail__meta" id="productModalMeta"></div>
+      <div class="product-detail__actions" id="productModalActions"></div>
+    </div>
+  </div>
+
+  <!-- ===== WAITLIST MODAL ===== -->
+  <div class="modal" id="waitlistModal" aria-hidden="true" role="dialog" aria-labelledby="waitlistTitle">
+    <div class="modal__backdrop" id="waitlistModalBackdrop"></div>
+    <div class="modal__content modal__content--sm">
+      <button class="modal__close" id="waitlistModalClose" aria-label="Close">&times;</button>
+      <h2 class="modal__title" id="waitlistTitle" data-i18n="waitlist.title"></h2>
+      <form id="waitlistForm" novalidate>
+        <input type="hidden" id="waitlistProductId" name="product_id">
+        <div class="form-group">
+          <label for="waitlistName" data-i18n="waitlist.name"></label>
+          <input type="text" id="waitlistName" name="name" required autocomplete="name">
+          <span class="form-error" id="waitlistNameError" data-i18n="waitlist.nameError"></span>
+        </div>
+        <div class="form-group">
+          <label for="waitlistPhone" data-i18n="waitlist.phone"></label>
+          <input type="tel" id="waitlistPhone" name="phone" required autocomplete="tel" dir="ltr">
+          <span class="form-error" id="waitlistPhoneError" data-i18n="waitlist.phoneError"></span>
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg" data-i18n="waitlist.submit"></button>
+      </form>
+      <div id="waitlistSuccess" class="success-msg" style="display:none;" data-i18n="waitlist.success"></div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <div class="footer__links">
+        <a id="footerWhatsapp" href="#" target="_blank" rel="noopener" class="footer__link" data-i18n="footer.whatsapp">
+        </a>
+        <a id="footerFacebook" href="#" target="_blank" rel="noopener" class="footer__link footer__link--social" style="display:none;">Facebook</a>
+        <a id="footerInstagram" href="#" target="_blank" rel="noopener" class="footer__link footer__link--social" style="display:none;">Instagram</a>
+        <a id="footerTiktok" href="#" target="_blank" rel="noopener" class="footer__link footer__link--social" style="display:none;">TikTok</a>
+        <a href="privacy.html" class="footer__link" data-i18n="nav.privacy"></a>
+      </div>
+      <div class="footer__license" id="footerLicense" style="display:none;"></div>
+      <p class="footer__copy">
+        &copy; <span id="footerYear"></span> <span id="footerBrand"></span>. <span data-i18n="footer.copyright"></span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+  <a id="floatingWa" href="#" target="_blank" rel="noopener" class="fab-whatsapp" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.005 21.785a9.68 9.68 0 01-4.934-1.355l-.354-.21-3.671.963.98-3.578-.231-.368A9.68 9.68 0 012.22 12.01c.003-5.35 4.358-9.702 9.714-9.702a9.65 9.65 0 016.872 2.85 9.65 9.65 0 012.844 6.862c-.003 5.35-4.358 9.702-9.71 9.702l-.004.003zm8.272-17.97A11.59 11.59 0 0012.005.19C5.495.19.16 5.52.157 12.013a11.8 11.8 0 001.578 5.907L.057 23.81l6.063-1.59a11.82 11.82 0 005.632 1.437h.005c6.508 0 11.843-5.33 11.846-11.822a11.76 11.76 0 00-3.462-8.38z"/></svg>
+  </a>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="js/i18n.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/track.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

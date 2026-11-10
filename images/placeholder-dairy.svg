@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#E8DCC8"/>
+  <text x="200" y="140" font-family="Cairo, sans-serif" font-size="18" fill="#8B7355" text-anchor="middle">صورة توضيحية</text>
+  <text x="200" y="170" font-family="Cairo, sans-serif" font-size="14" fill="#A89070" text-anchor="middle">Sample Photo — Dairy</text>
+  <circle cx="200" cy="85" r="25" fill="none" stroke="#A89070" stroke-width="2"/>
+  <ellipse cx="200" cy="85" rx="15" ry="8" fill="none" stroke="#A89070" stroke-width="1.5"/>
+</svg>
+
